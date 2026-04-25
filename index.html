@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Anime Center</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ✨ BRILLO DORADO MÁS INTENSO */
+    body, h1, h2, summary, p, a {
+      text-shadow:
+        0 0 4px rgba(255, 215, 0, 0.6),
+        0 0 8px rgba(255, 215, 0, 0.4),
+        0 0 12px rgba(255, 215, 0, 0.2);
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 3em;
+      text-align: center;
+      letter-spacing: 2px;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 2em;
+      z-index: 1;
+    }
+
+    .faq {
+      width: 80%;
+      max-width: 700px;
+      margin-top: 20px;
+      z-index: 1;
+    }
+
+    details {
+      background: #111;
+      margin: 10px 0;
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    details:hover {
+      background: #1a1a1a;
+    }
+
+    summary {
+      font-weight: bold;
+    }
+
+    details p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    /* BOTÓN DORADO */
+    .gold-btn {
+      display: inline-block;
+      margin: 50px auto;
+      padding: 15px 40px;
+      font-size: 1.2em;
+      color: black;
+      background: gold;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      box-shadow: 0 0 10px gold;
+      animation: glowGold 2s infinite alternate;
+      z-index: 1;
+    }
+
+    .gold-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px gold;
+    }
+
+    @keyframes glowGold {
+      from { box-shadow: 0 0 10px gold; }
+      to { box-shadow: 0 0 25px gold; }
+    }
+
+    /* PARTÍCULAS */
+    .particles {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -60px;
+      width: 10px;
+      height: 10px;
+      background: rgba(255, 215, 0, 0.7);
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatUp linear infinite;
+    }
+
+    .l1 { left: 4%; }
+    .l2 { left: 8%; }
+    .l3 { left: 12%; }
+    .l4 { left: 16%; }
+    .l5 { left: 20%; }
+
+    .r1 { right: 4%; }
+    .r2 { right: 8%; }
+    .r3 { right: 12%; }
+    .r4 { right: 16%; }
+    .r5 { right: 20%; }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-50vh) scale(1.4);
+      }
+      100% {
+        transform: translateY(-100vh) scale(0.7);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="particles">
+    <div class="bubble l1" style="animation-duration: 5s;"></div>
+    <div class="bubble l2" style="animation-duration: 6s;"></div>
+    <div class="bubble l3" style="animation-duration: 5.5s;"></div>
+    <div class="bubble l4" style="animation-duration: 6.5s;"></div>
+    <div class="bubble l5" style="animation-duration: 5.2s;"></div>
+
+    <div class="bubble r1" style="animation-duration: 5s;"></div>
+    <div class="bubble r2" style="animation-duration: 6.2s;"></div>
+    <div class="bubble r3" style="animation-duration: 5.7s;"></div>
+    <div class="bubble r4" style="animation-duration: 6.5s;"></div>
+    <div class="bubble r5" style="animation-duration: 5.3s;"></div>
+  </div>
+
+  <h1>Anime Center!</h1>
+
+  <h2>Frecuent Asked Questions</h2>
+
+  <div class="faq">
+
+    <details>
+      <summary>¿What we are?</summary>
+      <p>We are a anime discord server!</p>
+    </details>
+
+    <details>
+      <summary>When did we found our server?</summary>
+      <p>24 of april of 2026..</p>
+    </details>
+
+    <details>
+      <summary>In what platform is our server?</summary>
+      <p>Discord</p>
+    </details>
+
+    <details>
+      <summary>How can I join?</summary>
+      <p>You can join using our Discord invite link.</p>
+    </details>
+
+    <details>
+      <summary>What can I do in the server?</summary>
+      <p>Chat about anime, share content and meet new people.</p>
+    </details>
+
+  </div>
+
+  <a href="https://discord.gg/W9RpWDdt87" target="_blank" class="gold-btn">
+    Unirse a la comunidad!
+  </a>
+
+</body>
+</html>
